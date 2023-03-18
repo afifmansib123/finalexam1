@@ -66,8 +66,8 @@ export default function Home() {
       <input type = "text" value = {name} onChange={(event)=>setName(event.target.value)}/>
     </label>
 
-    <label> password:
-      <input type = "password" value = {password} onChange={(event)=>setPassword(event.target.value)}/>
+    <label> adress:
+      <input type = "text" value = {password} onChange={(event)=>setPassword(event.target.value)}/>
     </label>
 
     <label> Phone:
@@ -79,14 +79,30 @@ export default function Home() {
 
     
    
-    <ul>
-    {users.map((user) => (
-          <li key={user._id}>
-            name : {user.name} password: {user.password} Phone: {user.phone}
-            <button onClick={() => handleDelete(user._id)}>Delete</button>
-          </li>
-        ))}
-      </ul>
+    <table striped bordered hover>
+<thead>
+  <tr>
+    <th>#</th>
+    <th>Supllier Name</th>
+    <th>Supplier Adress</th>
+    <th>Supplier Phone number</th>
+    <th>Delete</th>
+    <th>Update</th>
+  </tr>
+</thead>
+<tbody>
+{users.map((user, index) => (
+<tr key={user._id}>
+<td>{index + 1}</td>
+<td>{user.name}</td>
+<td>{user.password}</td>
+<td>{user.phone}</td>
+<td><button onClick={() => handleDelete(user._id)}>Delete</button></td>
+<td><button>Update</button></td>
+</tr>
+))}
+</tbody>
+</table>
 
     </form>
 
