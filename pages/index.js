@@ -61,7 +61,7 @@ export default function Home() {
   return (
     <>
 
-    <h1>paykhan</h1>
+    <h1>Supplier Management page</h1>
     <form onSubmit={handlesubmit}>
 
 
@@ -82,7 +82,7 @@ export default function Home() {
 
     
    
-    <table striped bordered hover>
+    <Table striped bordered hover>
 <thead>
   <tr>
     <th>#</th>
@@ -100,12 +100,24 @@ export default function Home() {
 <td>{user.name}</td>
 <td>{user.password}</td>
 <td>{user.phone}</td>
-<td><button onClick={() => handleDelete(user._id)}>Delete</button></td>
-<td><button>Update</button></td>
+<td><Button variant="danger" onClick={() => handleDelete(user._id)}>Delete</Button></td>
+<td><Button variant="warning">Update</Button></td>
 </tr>
 ))}
 </tbody>
-</table>
+</Table>
+
+<a href="/login">Varify Supplier Credantials :</a>
+<div><br/>
+<p>**USER GUIDE*** <br/> This is the Sullier management page created by @AfifMansibChowdhury. You can add list of suppliers using the 'Add New Supplier' Button. Once the supplier is added , there will be an option to update and delete the supplier.</p>
+<p>Functionalities  </p><br/>
+<p>Management page : ok</p><br/>
+<p>Table with Proper Data : ok</p><br/>
+<p>Adding new Supplier : ok</p><br/>
+<p>Deleting Suppliers : ok</p><br/>
+<p>Updating page : NOT WORING</p><br/>
+<p>Additional Functionality: You can use a sign in postion to see if you are a registered suppler or not. enter your name and adress to varify that. Also Note that Once you add/delete a new supplier reload to see the changes.</p>
+</div>
 
     </form>
 
