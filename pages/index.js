@@ -3,6 +3,9 @@ import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 import { useState ,useEffect } from 'react'
+import { Button } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Table from 'react-bootstrap/Table';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -74,7 +77,7 @@ export default function Home() {
       <input type = "number" value = {phone} onChange={(event)=>setPhone(event.target.value)}/>
     </label>
 
-    <button type="submit">register</button>
+    <Button type="submit" variant="success">Save</Button>
     
 
     
