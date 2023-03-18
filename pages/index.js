@@ -58,7 +58,7 @@ export default function Home() {
   return (
     <>
 
-    <h1>register</h1>
+    <h1>paykhan</h1>
     <form onSubmit={handlesubmit}>
 
 
