@@ -28,7 +28,7 @@ const Login = () => {
   return (
     <>
       <Head>
-        <title>Login</title>
+        <title>Login in my ass</title>
       </Head>
       <h1>Login</h1>
       {error && <p>{error}</p>}
